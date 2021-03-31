@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+}
+.main {
+  display: grid;
+  grid-template-areas: "header header header" "article . aside" "footer footer footer";
+  grid-template-columns: 2fr 60px 1fr;
+  grid-template-rows: 200px;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 10px;
+}
+.header {
+  grid-area: header;
+}
+.article {
+  grid-area: article;
+}
+.aside {
+  grid-area: aside;
+}
+.footer {
+  grid-area: footer;
+}
