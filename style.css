@@ -7,24 +7,53 @@ html {
   box-sizing: inherit;
 }
 body {
+  background: rgb(171, 221, 204);
 }
 .main {
   display: grid;
   grid-template-areas: "header header header" "article . aside" "footer footer footer";
-  grid-template-columns: 2fr 60px 1fr;
-  grid-template-rows: 200px;
+  grid-template-columns: 2fr 30px 1fr;
+  grid-template-rows: 3fr 9fr 1fr;
   column-gap: 20px;
   row-gap: 20px;
   padding: 10px;
 }
+.navigation {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+
+}
+.navigation__position {
+  color: rgb(8, 99, 99);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
 .header {
+  align-content: center;
+  background-color: rgba(128, 128, 128, 0.486);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   grid-area: header;
+  padding: 20px;
 }
 .article {
+  background-color: dimgray;
   grid-area: article;
+  grid-row-start:;
+  grid-row-end: ;
+  padding: 20px;
 }
 .aside {
+  background-color: gainsboro;
   grid-area: aside;
+  
+  padding:20px ;
 }
 .footer {
   grid-area: footer;
