@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background: rgb(129, 212, 223);
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0px 0px 0px;
+  padding: 20px;
+}
+.navigation__position {
+  color: rgb(8, 99, 99);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.gridbox {
+  display: grid;
+  grid-template-rows: repeat(6, 100px);
+  grid-template-columns: repeat(6, 200px);
+  grid-template-areas:
+    "aa aa aa aa bb bb"
+    "aa aa aa aa bb bb"
+    "dd dd .. .. bb bb"
+    "dd dd .. .. bb bb"
+    "dd dd cc cc cc cc"
+    "dd dd cc cc cc cc";
+  background-color: antiquewhite;
+}
+.gridbox__aa {
+  grid-area: aa;
+  background-color: blueviolet;
+  font-size: 20px;
+}
+.gridbox__bb {
+  grid-area: bb;
+  background-color: rgb(165, 61, 118);
+  font-size: 20px;
+}
+.gridbox__cc {
+  grid-area: cc;
+  background-color: rgb(186, 226, 43);
+  font-size: 20px;
+}
+.gridbox__dd {
+  grid-area: dd;
+  background-color: rgb(43, 226, 113);
+  font-size: 20px;
+}
+@media (max-width 760px) {
+.gridbox {
+
+  }
+
+}

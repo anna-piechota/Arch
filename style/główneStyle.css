@@ -53,7 +53,7 @@ html {
     flex-direction: row;
   }
   .page {
-    background-image: url(background.jpg);
+    background-image: url(../background.jpg);
     min-height: 600px;
     background-position: center center;
     background-size: cover;
