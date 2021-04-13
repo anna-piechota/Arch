@@ -45,20 +45,7 @@ html {
     background-color: grey;
     text-align: center;
   }
-  .navigation {
-   padding: 20px;
-   display: none;
-  }
-  .navigation_header {
-    background:wheat ;
-   min-height: 60px;
-   position: fixed;
-   top: 0px; 
-   max-width: 100%;
-  }
-  .navigation--open {
-    display: block;
-  }
+
   .navigation__position {
     color: rgb(8, 99, 99);
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -100,13 +87,22 @@ html {
   }
   .page {
     background-image: url(../Pracownicy.jpg);
-    background-position: center center;
+    background-position:center  center;
     background-repeat: repeat-x;
     height: 90%;
     display: block;
     max-width: 100%;
     object-fit: cover;
   }
+ page {
+    background-image: url(../Pracownicy.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 60%;
+    margin:auto;
+    width: 60%;
+  }
+
   .header__logo {
     display: flex;
     justify-content: center;
@@ -118,19 +114,7 @@ html {
  .header__logo--text {
    font-size: 35px;
  }
- @media(min-width:760px) {
- hamburger {
-   display none;
- }
- navigation {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 20px 0px 0px 0px;
-}
-
-
-}
+ 
 @media(max-width:760px) {
 .header__logo {
   display: none;
@@ -144,24 +128,28 @@ html {
   background: none;
 }
 .navigation {
-  padding: 20px;
   display: none;
  }
  .navigation__header {
-   background: cadetblue;
-   height: 60px;
+   background: rgba(95, 158, 160, 0);
+   height: 80px;
    position: sticky;
    top: 0px;
  }
  .navigation--open {
   display: block;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+.navigation__position {
+  font-size: 16px;
 }
 
 .navigation__position {
+  display: block;
   color: blueviolet;
- position: absolute;
- left: 20px;
- top: 20px;
+
 }
  
 

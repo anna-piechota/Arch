@@ -9,6 +9,9 @@ html {
 body {
   background: rgb(171, 221, 204);
 }
+.hamburger {
+  display: none;
+}
 .main {
   display: grid;
   grid-template-areas: "header header header" "article . aside" "footer footer footer";
@@ -34,13 +37,18 @@ body {
   
 }
 .header {
-  align-content: center;
+  align-items: top;
+  background-image: url(../formaRys.jpg);
+  background-position: center center;
+  background-size: cover;
   background-color: rgba(128, 128, 128, 0.486);
   display: flex;
   flex-direction: row;
   justify-content: center;
   grid-area: header;
+  height: 250px;
   padding: 20px;
+  width: 100%;
 }
 .article {
   background-color: dimgray;
@@ -57,4 +65,58 @@ body {
 }
 .footer {
   grid-area: footer;
+}
+@media (max-width:460px) {
+  .button__position {
+    background: whitesmoke;
+    display: sticky;
+    top: 0px;
+    height: 70px;
+  }
+  .main {
+    display: grid;
+    grid-template-areas: "header header header" "article . aside" "footer footer footer";
+    grid-template-columns: 2fr 10px 1fr;
+    grid-template-rows: 3fr 9fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 5px;
+  } 
+  .navigation {
+    display: none;
+  }
+  .navigation--open {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    padding: 0px;
+   
+  }
+  .navigation__position {
+    display: block;
+    color: rgb(8, 99, 99);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    top: 10px; 
+  } 
+  .article {
+    font-size: 14px;
+  }
+  .aside {
+    font-size: 14px;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top:20px;
+    right: 10px;
+    border: none;
+    background: none;
+  }
+  .header {
+    font-size: 16px;
+  }
 }
