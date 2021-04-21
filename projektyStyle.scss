@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+.article {
+  display: flex;
+  flex-direction: row;
+  &__picture--one {
+    grid-area: 2/1/3/2;
+    background-color: azure;
+    margin: 0px 10px;
+  }
+  &__picture--two {
+    background-color: grey;
+    grid-area: 2/2/3/3;
+    margin: 0px 10px;
+    padding: 0px 20px;
+  }
+  &__picture--three {
+    grid-area: 2/3/3/4;
+    background-color: azure;
+    margin: 0px 10px;
+    padding: 0px 20px;
+  }
+  &__picture--four {
+    background-color: grey;
+    grid-area: 2/4/3/5;
+    margin: 0px 10px;
+    padding: 0px 20px;
+  }
+}
+body {
+    background: rgb(171, 221, 204);
+  }
+  grid-template-areas: "header header header header" "article article article article " "footer footer footer footer";
+  grid-template-columns: 2fr 3fr 2fr 3fr;
+  grid-template-rows: 6fr 5fr 1fr;
+  row-gap: 10px;
+  padding: 0px;
+}
+.header {
+    background-image: url(../Forma.jpg);
+    background-position: center center;
+    align-content: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    justify-content: center;
+    grid-area: header;
+    padding: 10px;
+    &__logo {
+      display: flex;
+      justify-content: center;
+      &--line {
+        width: 25%;
+        border-radius: 30px;
+      }
+    }
+  }
+.footer {
+  grid-area: footer;
+  padding: 0px;
+}
+.main {
+    display: grid;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    &__position {
+      color: rgb(8, 99, 99);
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
